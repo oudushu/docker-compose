@@ -1,0 +1,25 @@
+version: "3"
+
+networks:
+  gitea:
+    external: false
+    
+services:
+  server:
+    image: gitea/gitea:latest
+    container_name: gitea
+    environment:
+      - USER_UID=1031
+      - USER_GID=65537
+      - TZ=Asia/Shanghai
+    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./data:/data
+      - /volume1/git/repositories:/data/git/repositories
+      - /volume1/git/lfs:/data/git/lfs
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
+      - "222:22"

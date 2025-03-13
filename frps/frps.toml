@@ -1,0 +1,9 @@
+bindPort = 7000
+auth.method = "token"
+auth.token = "PjHgPvYZ"
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = "ohmyvip"
+webServer.password = "ohmyvip123A"
+vhostHTTPPort = 9000
+vhostHTTPSPort = 9001

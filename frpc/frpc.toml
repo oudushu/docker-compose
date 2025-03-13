@@ -1,0 +1,53 @@
+serverAddr = "nas.ohmy.vip"
+serverPort = 7000
+auth.method = "token"
+auth.token = "PjHgPvYZ"
+
+[[proxies]]
+name = "web02"
+type = "https"
+localPort = 5001
+customDomains = ["nas.odszz.com"]
+transport.useEncryption = true
+transport.useCompression = true
+
+[[proxies]]
+name = "WebDAV_https"
+type = "tcp"
+localPort = 5007
+remotePort = 9007
+transport.useEncryption = true
+transport.useCompression = true
+
+[[proxies]]
+name = "jellyfin_https"
+type = "tcp"
+localPort = 8097
+remotePort = 9097
+transport.useEncryption = true
+transport.useCompression = true
+
+[[proxies]]
+name = "alist_https"
+type = "tcp"
+localPort = 6244
+remotePort = 9244
+transport.useEncryption = true
+transport.useCompression = true
+
+[[proxies]]
+name = "gitea_https"
+type = "tcp"
+localPort = 8300
+remotePort = 9300
+transport.useEncryption = true
+transport.useCompression = true
+
+[[proxies]]
+name = "ha_https"
+type = "tcp"
+localPort = 8124
+remotePort = 9123
+transport.useEncryption = true
+transport.useCompression = true
+
