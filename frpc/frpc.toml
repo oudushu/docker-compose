@@ -20,14 +20,6 @@ transport.useEncryption = true
 transport.useCompression = true
 
 [[proxies]]
-name = "jellyfin_https"
-type = "tcp"
-localPort = 8097
-remotePort = 9097
-transport.useEncryption = true
-transport.useCompression = true
-
-[[proxies]]
 name = "alist_https"
 type = "tcp"
 localPort = 6244
